@@ -1,0 +1,66 @@
+#titleHome {
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.myNav a {
+    color: green;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.myNav a:hover {
+    background-color: coral;
+}
+
+.myNav img {
+    width: 70px;
+    height: 59px;
+    flex-shrink: 0;
+    margin-right: 0px;
+}
+
+.myNav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
+    align-items: center;
+}
+
+.section div {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.left {
+    /* display: flex; */
+    width: 621px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+}
+
+.left img {
+    opacity: 0.8;
+    background: lightgray 50% / cover no-repeat;
+    mix-blend-mode: luminosity;
+}
+.content{
+    font-size: 30px;
+}
+#Contact{
+    font-size: 40px;
+}
+.CC{
+    font-size: 20px;
+}
