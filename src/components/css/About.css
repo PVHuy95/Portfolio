@@ -1,0 +1,133 @@
+.about {
+    background: var(--dark-bg-light);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+.about-image-wrapper {
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.about-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 110%;
+    background: var(--gradient-primary);
+    border-radius: 20px;
+    filter: blur(40px);
+    opacity: 0.2;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.about-placeholder {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-red);
+    transition: all var(--transition-base);
+}
+
+.about-placeholder:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-red-glow);
+}
+
+.about-placeholder svg {
+    width: 100%;
+    display: block;
+}
+
+.about-text h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--white);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.about-text p {
+    color: var(--gray-300);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.05rem;
+}
+
+.about-text strong {
+    color: var(--primary-red);
+    font-weight: 600;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.stat-item {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background: var(--dark-surface);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    border: 1px solid rgba(239, 68, 68, 0.1);
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-red-glow);
+    border-color: var(--primary-red);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    display: block;
+    color: var(--gray-400);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+@media (max-width: 968px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .about-image {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-item {
+        padding: var(--spacing-md);
+    }
+}

@@ -1,0 +1,224 @@
+.contact {
+    background: var(--dark-bg);
+}
+
+/* Modern Grid Layout - 3 Columns */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+/* Contact Card Styles */
+.contact-card {
+    background: var(--dark-surface);
+    border: 2px solid rgba(239, 68, 68, 0.15);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    min-height: 180px;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.contact-card:hover::before {
+    opacity: 0.05;
+}
+
+.contact-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(239, 68, 68, 0.25);
+    border-color: var(--primary-red);
+}
+
+.contact-card>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* Icon Wrapper */
+.card-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.2) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+    transition: all 0.4s ease;
+    border: 2px solid rgba(239, 68, 68, 0.2);
+}
+
+.contact-card:hover .card-icon-wrapper {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 12px 30px rgba(239, 68, 68, 0.3);
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    filter: drop-shadow(0 4px 8px rgba(239, 68, 68, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.social-icon svg {
+    width: 36px;
+    height: 36px;
+}
+
+.contact-card:hover .card-icon {
+    transform: scale(1.15);
+}
+
+/* Card Content */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0;
+}
+
+.card-info {
+    font-size: 0.9rem;
+    color: var(--gray-300);
+    margin: 0;
+    word-break: break-word;
+}
+
+.card-description {
+    font-size: 0.85rem;
+    color: var(--primary-red);
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+    margin-top: auto;
+}
+
+.contact-card:hover .card-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Social Card Specific Styles */
+.social-card .card-icon-wrapper {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.2) 100%);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.social-card:hover {
+    border-color: #3b82f6;
+}
+
+.social-card:hover .card-icon-wrapper {
+    box-shadow: 0 12px 30px rgba(59, 130, 246, 0.3);
+}
+
+/* CTA Section */
+.contact-cta {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.15) 100%);
+    border: 2px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
+    text-align: center;
+    margin-top: var(--spacing-2xl);
+}
+
+.contact-cta h3 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-cta p {
+    font-size: 1.1rem;
+    color: var(--gray-400);
+    margin-bottom: var(--spacing-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-cta .btn {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .contact-card {
+        min-height: 160px;
+        padding: var(--spacing-md);
+    }
+
+    .card-icon-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-icon {
+        font-size: 2rem;
+    }
+
+    .social-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-info {
+        font-size: 0.85rem;
+    }
+
+    .contact-cta h3 {
+        font-size: 1.5rem;
+    }
+
+    .contact-cta p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card:hover {
+        transform: translateY(-5px);
+    }
+}
