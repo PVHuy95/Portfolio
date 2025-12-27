@@ -3,19 +3,20 @@ import './css/Projects.css';
 const Projects = () => {
     const projects = [
         {
+            emoji: '🚑',
+            title: 'LifeLink - Ambulance Service',
+            description: 'Emergency ambulance service platform with real-time tracking, appointment booking, and quick response system for medical emergencies.',
+            tags: ['React', 'Vite', 'Healthcare'],
+            color: 'project-1',
+            link: 'https://lifelink-k693.onrender.com'
+        },
+        {
             emoji: '🔬',
             title: 'Nobel Prize Winner - Marie Curie',
             description: 'An informative website about Marie Curie, the pioneering physicist and chemist who won two Nobel Prizes for her groundbreaking research on radioactivity.',
             tags: ['React', 'Bootstrap'],
-            color: 'project-1',
+            color: 'project-2',
             link: 'https://nobel-prize-winner.onrender.com/'
-        },
-        {
-            emoji: '📊',
-            title: 'Dashboard Analytics',
-            description: 'Real-time data analytics dashboard with interactive charts and automated reporting.',
-            tags: ['Vue.js', 'Python', 'PostgreSQL'],
-            color: 'project-2'
         },
         {
             emoji: '💬',
