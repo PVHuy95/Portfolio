@@ -48,7 +48,7 @@ const Projects = () => {
             description: 'Personal developer portfolio application built with React and Tailwind CSS to showcase software engineering skills and projects.',
             tags: ['React', 'Tailwind CSS', 'JavaScript'],
             color: 'project-6',
-            link: 'https://github.com/PVHuy95/my-profile'
+            link: 'https://my-profile-5bnu.onrender.com/'
         }
     ];
 
