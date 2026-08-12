@@ -44,11 +44,11 @@ const Projects = () => {
         },
         {
             emoji: '💻',
-            title: 'Personal Portfolio Website',
-            description: 'Modern responsive developer portfolio built to showcase software engineering projects, skills, and experience.',
-            tags: ['React', 'Vite', 'CSS3'],
+            title: 'My Profile Website',
+            description: 'Personal developer portfolio application built with React and Tailwind CSS to showcase software engineering skills and projects.',
+            tags: ['React', 'Tailwind CSS', 'JavaScript'],
             color: 'project-6',
-            link: 'https://github.com/PVHuy95/Portfolio'
+            link: 'https://github.com/PVHuy95/my-profile'
         }
     ];
 
