@@ -19,32 +19,36 @@ const Projects = () => {
             link: 'https://nobel-prize-winner.onrender.com/'
         },
         {
-            emoji: '💬',
-            title: 'Chat Application',
-            description: 'Real-time chat application with end-to-end encryption, file sharing, and video calls.',
-            tags: ['Next.js', 'WebSocket', 'Redis'],
-            color: 'project-3'
-        },
-        {
             emoji: '🏥',
-            title: 'Healthcare Management',
-            description: 'Hospital management system with appointment scheduling, medical records, and online consultation.',
-            tags: ['React', '.NET', 'SQL Server'],
-            color: 'project-4'
+            title: 'HealthLink - Healthcare Management',
+            description: 'Comprehensive healthcare management platform with appointment scheduling, patient records, and doctor assignment system.',
+            tags: ['React', 'JavaScript', 'Healthcare'],
+            color: 'project-3',
+            link: 'https://github.com/PVHuy95/HealthLink'
         },
         {
-            emoji: '🎓',
-            title: 'Learning Management System',
-            description: 'Online learning platform with video lectures, quizzes, and progress tracking.',
-            tags: ['React Native', 'Firebase'],
-            color: 'project-5'
+            emoji: '🌴',
+            title: 'MoonBay - Hotel Booking System',
+            description: 'Online hotel reservation platform for MoonBay Hotel with room booking, transparent pricing, and interactive management.',
+            tags: ['ReactJS', 'Laravel', 'MySQL'],
+            color: 'project-4',
+            link: 'https://github.com/PVHuy95/MoonBay'
         },
         {
-            emoji: '🎵',
-            title: 'Music Streaming App',
-            description: 'Music streaming application with personalized playlists, smart recommendations, and high quality.',
-            tags: ['Vue.js', 'Express', 'AWS'],
-            color: 'project-6'
+            emoji: '☕',
+            title: 'NuoiToi - Personal Web Platform',
+            description: 'Interactive personal support website featuring integrated VietQR instant payment and donation system.',
+            tags: ['JavaScript', 'HTML/CSS', 'VietQR'],
+            color: 'project-5',
+            link: 'https://github.com/PVHuy95/nuoitoi'
+        },
+        {
+            emoji: '💻',
+            title: 'Personal Portfolio Website',
+            description: 'Modern responsive developer portfolio built to showcase software engineering projects, skills, and experience.',
+            tags: ['React', 'Vite', 'CSS3'],
+            color: 'project-6',
+            link: 'https://github.com/PVHuy95/Portfolio'
         }
     ];
 
@@ -60,7 +64,9 @@ const Projects = () => {
                             <div className={`project-image ${project.color}`}>
                                 <div className="project-emoji">{project.emoji}</div>
                                 <div className="project-overlay">
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">View Project →</a>
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                                        {project.link?.includes('github.com') ? 'View GitHub →' : 'View Demo →'}
+                                    </a>
                                 </div>
                             </div>
 
